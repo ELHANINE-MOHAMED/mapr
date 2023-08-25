@@ -1,0 +1,102 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: decoder-cronjob
+spec:
+  schedule: "51 * * * *"
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 60
+      template:
+        spec:
+          containers:
+          - name: decoder
+            image: elhanine/decoder1
+            command: ["python", "/app/decoder.py" ,"--host", "elasticsearch"]
+            volumeMounts:
+            - name: cdr-pvc1
+              mountPath: /mnt/data/cdr/raw
+            - name: cdr-pvc1
+              mountPath: /mnt/data/cdr/decoded
+          volumes:
+          - name: cdr-pvc1
+            persistentVolumeClaim:
+              claimName: cdr-pvc1
+          restartPolicy: OnFailure
+# apiVersion: batch/v1
+# kind: CronJob
+# metadata:
+#   name: decoder-cronjob
+# spec:
+#   schedule: "42 * * * *"
+#   jobTemplate:
+#     spec:
+#       template:
+#         spec:
+#           containers:
+#           - name: decoded
+#             image: youssefaitrimouch/decoded
+#             volumeMounts:
+#             - name: cdr-pvc1
+#               mountPath: /mnt/data/cdr/raw
+            # - name: cdr-pvc1
+            #   mountPath: /mnt/data/cdr/decoded
+              # readOnly: false
+          # volumes:
+          # - name: cdr-pvc1
+          #   persistentVolumeClaim:
+          #     claimName: cdr-pvc1
+          # restartPolicy: OnFailure
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: decoder-deployment
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: decoded
+#   template:
+#     metadata:
+#       labels:
+#         app: decoded
+#     spec:
+#       containers:
+#       - name: decoded
+#         image: youssefaitrimouch/decoded
+#         volumeMounts:
+#         - name: cdr-pvc1
+#           mountPath: /mnt/data/cdr/raw
+#         - name: cdr-pvc1
+#           mountPath: /mnt/data/cdr/decoded
+#           readOnly: false
+#       volumes:
+#       - name: cdr-pvc1
+#         persistentVolumeClaim:
+#           claimName: cdr-pvc1
+
+# apiVersion: batch/v1
+# kind: CronJob
+# metadata:
+#   name: decoder-cronjob
+# spec:
+#   schedule: "04 * * * *"
+#   jobTemplate:
+#     spec:
+#       template:
+#         spec:
+#       containers:
+#       - name: decoded
+#         image: youssefaitrimouch/decoded
+#         volumeMounts:
+#         - name: cdr-pvc1
+#           mountPath: /mnt/data/cdr/raw
+#         - name: cdr-pvc1
+#           mountPath: /mnt/data/cdr/decoded
+#           readOnly: false
+#       volumes:
+#       - name: cdr-pvc1
+#         persistentVolumeClaim:
+#           claimName: cdr-pvc1
+

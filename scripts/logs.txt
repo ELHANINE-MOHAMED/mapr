@@ -1,0 +1,165 @@
+* 
+* ==> Audit <==
+* |---------|--------------------------------|----------|--------------------|---------|---------------------|---------------------|
+| Command |              Args              | Profile  |        User        | Version |     Start Time      |      End Time       |
+|---------|--------------------------------|----------|--------------------|---------|---------------------|---------------------|
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 16:28 +01 |                     |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 16:29 +01 | 30 May 23 16:31 +01 |
+| config  | set memory 8000                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 16:32 +01 | 30 May 23 16:32 +01 |
+| stop    |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:27 +01 | 30 May 23 17:27 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:28 +01 |                     |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:29 +01 | 30 May 23 17:30 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:32 +01 | 30 May 23 17:32 +01 |
+| start   | --cpus=4 --disk-size=20000     | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:36 +01 |                     |
+|         | --memory=8000                  |          |                    |         |                     |                     |
+| start   | --cpus=4 --disk-size=20000     | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:36 +01 |                     |
+|         | --memory=8000 --driver=hyperv  |          |                    |         |                     |                     |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:37 +01 | 30 May 23 17:37 +01 |
+| start   | --cpus=4 --disk-size=20000     | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:37 +01 |                     |
+|         | --memory=8000 --driver=hyperv  |          |                    |         |                     |                     |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:39 +01 | 30 May 23 17:39 +01 |
+| start   | --cpus=4 --disk-size=20000     | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:39 +01 |                     |
+|         | --memory=8000 --driver=hyperv  |          |                    |         |                     |                     |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 30 May 23 17:40 +01 | 30 May 23 17:40 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 31 May 23 16:11 +01 |                     |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 31 May 23 16:12 +01 |                     |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 31 May 23 16:12 +01 | 31 May 23 16:12 +01 |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 31 May 23 16:12 +01 | 31 May 23 16:16 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 31 May 23 22:56 +01 | 31 May 23 22:56 +01 |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 31 May 23 22:57 +01 | 31 May 23 23:03 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 31 May 23 23:51 +01 | 31 May 23 23:51 +01 |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 04:17 +01 | 01 Jun 23 04:19 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 07:10 +01 | 01 Jun 23 07:10 +01 |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 14:00 +01 |                     |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 14:09 +01 |                     |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 14:24 +01 | 01 Jun 23 14:25 +01 |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 14:26 +01 | 01 Jun 23 14:28 +01 |
+| stop    |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 18:32 +01 | 01 Jun 23 18:32 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 18:33 +01 | 01 Jun 23 18:34 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 19:58 +01 | 01 Jun 23 19:59 +01 |
+| start   | --driver=hyperv                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 20:00 +01 | 01 Jun 23 20:02 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 01 Jun 23 23:21 +01 | 01 Jun 23 23:21 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 02 Jun 23 11:48 +01 | 02 Jun 23 11:51 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 02 Jun 23 13:09 +01 | 02 Jun 23 13:09 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 02 Jun 23 16:55 +01 | 02 Jun 23 16:58 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 05 Jun 23 20:19 +01 | 05 Jun 23 20:21 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 05 Jun 23 20:21 +01 | 05 Jun 23 20:24 +01 |
+| delete  |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 06 Jun 23 09:23 +01 | 06 Jun 23 09:26 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 06 Jun 23 09:26 +01 | 06 Jun 23 09:29 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 08 Jun 23 11:19 +01 |                     |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 08 Jun 23 11:34 +01 |                     |
+| stop    |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 08 Jun 23 19:48 +01 | 08 Jun 23 19:48 +01 |
+| start   |                                | minikube | DESKTOP-OIBOVR4\pc | v1.30.1 | 11 Jun 23 13:18 +01 |                     |
+|---------|--------------------------------|----------|--------------------|---------|---------------------|---------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2023/06/11 13:18:47
+Running on machine: DESKTOP-OIBOVR4
+Binary: Built with gc go1.20.2 for windows/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0611 13:18:47.929031   15516 out.go:296] Setting OutFile to fd 84 ...
+I0611 13:18:47.999396   15516 out.go:348] isatty.IsTerminal(84) = true
+I0611 13:18:47.999396   15516 out.go:309] Setting ErrFile to fd 88...
+I0611 13:18:47.999396   15516 out.go:348] isatty.IsTerminal(88) = true
+I0611 13:18:48.015999   15516 out.go:303] Setting JSON to false
+I0611 13:18:48.023608   15516 start.go:125] hostinfo: {"hostname":"DESKTOP-OIBOVR4","uptime":873284,"bootTime":1685612643,"procs":291,"os":"windows","platform":"Microsoft Windows 10 Pro","platformFamily":"Standalone Workstation","platformVersion":"10.0.19045.2965 Build 19045.2965","kernelVersion":"10.0.19045.2965 Build 19045.2965","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"90abf53c-4008-4a0c-ac89-7849c112b897"}
+W0611 13:18:48.023608   15516 start.go:133] gopshost.Virtualization returned error: not implemented yet
+I0611 13:18:48.026398   15516 out.go:177] 😄  minikube v1.30.1 on Microsoft Windows 10 Pro 10.0.19045.2965 Build 19045.2965
+I0611 13:18:48.030517   15516 notify.go:220] Checking for updates...
+I0611 13:18:48.031521   15516 config.go:182] Loaded profile config "minikube": Driver=hyperv, ContainerRuntime=docker, KubernetesVersion=v1.26.3
+I0611 13:18:48.031521   15516 driver.go:375] Setting default libvirt URI to qemu:///system
+I0611 13:18:49.491426   15516 out.go:177] ✨  Using the hyperv driver based on existing profile
+I0611 13:18:49.494486   15516 start.go:295] selected driver: hyperv
+I0611 13:18:49.494486   15516 start.go:870] validating driver "hyperv" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.30.1-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.39@sha256:bf2d9f1e9d837d8deea073611d2605405b6be904647d97ebd9b12045ddfe1106 Memory:8000 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:172.29.22.43 Port:8443 KubernetesVersion:v1.26.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\pc:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0611 13:18:49.495320   15516 start.go:881] status for hyperv: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0611 13:18:49.549172   15516 cni.go:84] Creating CNI manager for ""
+I0611 13:18:49.549738   15516 cni.go:157] "hyperv" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0611 13:18:49.549738   15516 start_flags.go:319] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.30.1-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.39@sha256:bf2d9f1e9d837d8deea073611d2605405b6be904647d97ebd9b12045ddfe1106 Memory:8000 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:172.29.22.43 Port:8443 KubernetesVersion:v1.26.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\pc:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0611 13:18:49.551872   15516 iso.go:125] acquiring lock: {Name:mk90e234cf985950963b24f261206cebd1b07319 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0611 13:18:49.558253   15516 out.go:177] 👍  Starting control plane node minikube in cluster minikube
+I0611 13:18:49.561006   15516 preload.go:132] Checking if preload exists for k8s version v1.26.3 and runtime docker
+I0611 13:18:49.561535   15516 preload.go:148] Found local preload: C:\Users\pc\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.26.3-docker-overlay2-amd64.tar.lz4
+I0611 13:18:49.562639   15516 cache.go:57] Caching tarball of preloaded images
+I0611 13:18:49.563172   15516 preload.go:174] Found C:\Users\pc\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.26.3-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0611 13:18:49.563172   15516 cache.go:60] Finished verifying existence of preloaded tar for  v1.26.3 on docker
+I0611 13:18:49.563718   15516 profile.go:148] Saving config to C:\Users\pc\.minikube\profiles\minikube\config.json ...
+I0611 13:18:49.565249   15516 cache.go:193] Successfully downloaded all kic artifacts
+I0611 13:18:49.566072   15516 start.go:364] acquiring machines lock for minikube: {Name:mk460054b786aad12631bd9de75deb990dd4148c Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0611 13:18:49.567039   15516 start.go:368] acquired machines lock for "minikube" in 967.3µs
+I0611 13:18:49.567039   15516 start.go:96] Skipping create...Using existing machine configuration
+I0611 13:18:49.567039   15516 fix.go:55] fixHost starting: 
+I0611 13:18:49.568032   15516 main.go:141] libmachine: [executing ==>] : C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0611 13:18:50.241083   15516 main.go:141] libmachine: [stdout =====>] : Off
+
+I0611 13:18:50.241083   15516 main.go:141] libmachine: [stderr =====>] : 
+I0611 13:18:50.241083   15516 fix.go:103] recreateIfNeeded on minikube: state=Stopped err=<nil>
+W0611 13:18:50.241083   15516 fix.go:129] unexpected machine state, will restart: <nil>
+I0611 13:18:50.243789   15516 out.go:177] 🔄  Restarting existing hyperv VM for "minikube" ...
+I0611 13:18:50.250789   15516 main.go:141] libmachine: [executing ==>] : C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Start-VM minikube
+I0611 13:19:12.374715   15516 main.go:141] libmachine: [stdout =====>] : 
+E0611 13:19:12.375751   15516 main.go:137] libmachine: [stderr =====>] : Hyper-V\Start-VM : Échec du démarrage de 'minikube'.
+Mémoire insuffisante dans le système pour démarrer l’ordinateur virtuel minikube.
+Échec de l’initialisation de la mémoire: Les ressources mémoire disponibles sont insuffisantes pour exécuter cette 
+opération. (0x8007000E).
+Échec du démarrage de « minikube ». (ID d’ordinateur virtuel 9B003787-C120-45C6-97F8-1B86240884A2)
+Mémoire insuffisante dans le système pour démarrer l’ordinateur virtuel minikube avec 8000 mégaoctets de mémoire RAM. (ID 
+d’ordinateur virtuel 9B003787-C120-45C6-97F8-1B86240884A2)
+«minikube» n’a pas pu initialiser la mémoire: Les ressources mémoire disponibles sont insuffisantes pour exécuter cette 
+opération. (0x8007000E). (ID d’ordinateur virtuel 9B003787-C120-45C6-97F8-1B86240884A2)
+Au caractère Ligne:1 : 1
++ Hyper-V\Start-VM minikube
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : FromStdErr : (:) [Start-VM], VirtualizationException
+    + FullyQualifiedErrorId : OutOfMemory,Microsoft.HyperV.PowerShell.Commands.StartVM
+ 
+
+I0611 13:19:12.386006   15516 fix.go:57] fixHost completed within 22.8173794s
+I0611 13:19:12.386533   15516 start.go:83] releasing machines lock for "minikube", held for 22.8194938s
+W0611 13:19:12.387575   15516 start.go:687] error starting host: driver start: exit status 1
+W0611 13:19:12.393386   15516 out.go:239] 🤦  StartHost failed, but will try again: driver start: exit status 1
+I0611 13:19:12.393918   15516 start.go:702] Will try again in 5 seconds ...
+I0611 13:19:17.407253   15516 start.go:364] acquiring machines lock for minikube: {Name:mk460054b786aad12631bd9de75deb990dd4148c Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0611 13:19:17.407827   15516 start.go:368] acquired machines lock for "minikube" in 0s
+I0611 13:19:17.409991   15516 start.go:96] Skipping create...Using existing machine configuration
+I0611 13:19:17.409991   15516 fix.go:55] fixHost starting: 
+I0611 13:19:17.412932   15516 main.go:141] libmachine: [executing ==>] : C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0611 13:19:18.032229   15516 main.go:141] libmachine: [stdout =====>] : Off
+
+I0611 13:19:18.032229   15516 main.go:141] libmachine: [stderr =====>] : 
+I0611 13:19:18.032229   15516 fix.go:103] recreateIfNeeded on minikube: state=Stopped err=<nil>
+W0611 13:19:18.032229   15516 fix.go:129] unexpected machine state, will restart: <nil>
+I0611 13:19:18.035226   15516 out.go:177] 🔄  Restarting existing hyperv VM for "minikube" ...
+I0611 13:19:18.039262   15516 main.go:141] libmachine: [executing ==>] : C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Start-VM minikube
+I0611 13:19:20.053164   15516 main.go:141] libmachine: [stdout =====>] : 
+E0611 13:19:20.053164   15516 main.go:137] libmachine: [stderr =====>] : Hyper-V\Start-VM : Échec du démarrage de 'minikube'.
+Impossible d’allouer 8000Mo de mémoire RAM: Ressources système insuffisantes pour terminer le service demandé. 
+(0x800705AA).
+Échec du démarrage de « minikube ». (ID d’ordinateur virtuel 9B003787-C120-45C6-97F8-1B86240884A2)
+«minikube» ne parvient pas à allouer 8000 Mo de mémoire RAM: Ressources système insuffisantes pour terminer le service 
+demandé. (0x800705AA). (ID d’ordinateur virtuel 9B003787-C120-45C6-97F8-1B86240884A2)
+Au caractère Ligne:1 : 1
++ Hyper-V\Start-VM minikube
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Start-VM], VirtualizationException
+    + FullyQualifiedErrorId : Unspecified,Microsoft.HyperV.PowerShell.Commands.StartVM
+ 
+
+I0611 13:19:20.055210   15516 fix.go:57] fixHost completed within 2.6452188s
+I0611 13:19:20.055210   15516 start.go:83] releasing machines lock for "minikube", held for 2.6473832s
+W0611 13:19:20.056212   15516 out.go:239] 😿  Failed to start hyperv VM. Running "minikube delete" may fix it: driver start: exit status 1
+I0611 13:19:20.063080   15516 out.go:177] 
+W0611 13:19:20.067034   15516 out.go:239] ❌  Exiting due to GUEST_PROVISION: error provisioning guest: Failed to start host: driver start: exit status 1
+W0611 13:19:20.067596   15516 out.go:239] 
+W0611 13:19:20.069662   15516 out.go:239] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I0611 13:19:20.075007   15516 out.go:177] 
+
+* 

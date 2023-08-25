@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decoder-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: decoder
+  template:
+    metadata:
+      labels:
+        app: decoder
+    spec:
+      containers:
+        - name: decoder
+          image: elhanine/decoder1
+          volumeMounts:
+            - name: cdr-pvc1
+              mountPath: /mnt/data/cdr/raw
+            - name: cdr-pvc1
+              mountPath: /mnt/data/cdr/decoded
+              readOnly: false
+          env:
+            - name: TEMP_FOLDER
+              value: /mnt/data/cdr/raw
+            - name: DECODED_FOLDER
+              value: /mnt/data/cdr/decoded
+      volumes:
+        - name: cdr-pvc1
+          persistentVolumeClaim:
+            claimName: cdr-pvc1

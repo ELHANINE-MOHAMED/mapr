@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dump-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dump
+  template:
+    metadata:
+      labels:
+        app: dump
+    spec:
+      containers:
+        - name: dump
+          image: elhanine/dumpraw1
+          volumeMounts:
+            - name: cdr-pvc1
+              mountPath: /mnt/data/cdr/raw
+      volumes:
+        - name: cdr-pvc1
+          persistentVolumeClaim:
+            claimName: cdr-pvc1

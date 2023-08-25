@@ -1,0 +1,75 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: dump-raw-cronjob
+spec:
+  schedule: "49 * * * *"
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 60
+      template:
+        spec:
+          containers:
+          - name: dump
+            image: elhanine/dumpraw1
+            command: ["python", "/app/dump_raw.py","--host", "elasticsearch"]
+            volumeMounts:
+            - name: cdr-pvc1
+              mountPath: /mnt/data/cdr/raw
+          volumes:
+          - name: cdr-pvc1
+            persistentVolumeClaim:
+              claimName: cdr-pvc1
+          restartPolicy: OnFailure
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: dump-deployment
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: dump
+#   template:
+#     metadata:
+#       labels:
+#         app: dump
+#     spec:
+#       containers:
+#       - name: dump
+#         image: youssefaitrimouch/dump
+#         volumeMounts:
+#         - name: cdr-pvc1
+#           mountPath: /mnt/data/cdr/raw
+#           readOnly: false
+#       volumes:
+#       - name: cdr-pvc1
+#         persistentVolumeClaim:
+#           claimName: cdr-pvc1
+
+# apiVersion: batch/v1
+# kind: CronJob
+# metadata:
+#   name: dump-raw-cronjob 
+# spec:
+#   schedule: "02 * * * *"
+#   jobTemplate:
+#     spec:
+#       template:
+#         spec:
+#           containers:
+#           - name: dump-raw
+#             image: youssefaitrimouch/dump
+#             imagePullPolicy: IfNotPresent
+#             command: ["python"]
+#             args: ["./dump_raw.py"]
+#             volumeMounts:
+#             - name: cdr-data
+#               mountPath: /mnt/data/cdr/raw
+#           restartPolicy: OnFailure
+#           volumes:
+#           - name: cdr-data
+#             persistentVolumeClaim:
+#               claimName: cdr-data-claim
+

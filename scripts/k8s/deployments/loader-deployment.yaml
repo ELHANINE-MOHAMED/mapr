@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loader-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loader
+  template:
+    metadata:
+      labels:
+        app: loader
+    spec:
+      containers:
+        - name: loader
+          image: elhanine/loader1
+          volumeMounts:
+            - name: cdr-pvc1
+              mountPath: /mnt/data/cdr/decoded
+          env:
+          - name: DECODED_FOLDER
+            value: /mnt/data/cdr/decoded
+          - name: DATABASE_USER
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secrets
+                key: username
+          - name: DATABASE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secrets
+                key: password
+      volumes:
+        - name: cdr-pvc1
+          persistentVolumeClaim:
+            claimName: cdr-pvc1

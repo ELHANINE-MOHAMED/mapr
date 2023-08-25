@@ -1,0 +1,52 @@
+version: '3.3'
+services:
+  dump_raw:
+    build: ./dump_raw/
+    command: sh -c "sleep 10s ; python3 ./dump_raw.py"
+    volumes:
+      - /var/lib/docker/volumes/volm/_data:/app/cdr
+
+  decoded:
+    build: ./decoded/
+    command: sh -c "sleep 30s ; python3 ./decoder.py"
+    volumes:
+      - /var/lib/docker/volumes/volm/_data:/app/cdr
+    depends_on:
+      - dump_raw
+
+  loader:
+    build: ./loader/
+    command: sh -c "sleep 40s ; python3 ./loader.py"
+    volumes:
+      - :/var/lib/docker/volumes/volm/_data/decoded
+
+
+    depends_on:
+      - db
+      - decoded
+
+  webservice:
+    build: ./webservice/
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'CDR'
+      MYSQL_ROOT_PASSWORD: 'mapr'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - db:/var/lib/mysql 
+volumes:
+  volm:
+    driver: local
+  db:
+    driver: local
+
+
